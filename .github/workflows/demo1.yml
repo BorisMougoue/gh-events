@@ -3,6 +3,12 @@ on:
  pull_request:
    types:    # you specify the activity type to trigger a workflow
      - opened
+ push:
+   branches:
+     - main # for push on the main branch
+     - 'dev-*' # dev-new , dev-this-is-new
+     - 'feat/**' # feat/new , feat/new/button any branch that starts with new
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
